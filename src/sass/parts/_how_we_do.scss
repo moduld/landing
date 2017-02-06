@@ -1,0 +1,87 @@
+.how_we_do{
+  width: 100%;
+  min-height: 29.4em;;
+  background: $light_black;
+  padding: 3.95em 0;
+  @extend .flex_center;
+  align-items: flex-start;
+  .main_wrapper{
+    @extend .flex_column;
+  }
+  .sect_title{
+    color: $yellow;
+    font-size: 1.8em;
+  }
+  .sect_describe{
+    font-family: $font_light;
+    color: white;
+    margin-top: 1.5em;
+    text-align: center;
+    padding: 0 1em;
+  }
+  .tools_wrapp{
+    display: flex;
+    margin-top: 3.9em;
+  }
+  .tool_container{
+    flex: 1;
+    text-align: center;
+    padding: 0 0.5em;
+  }
+  .icon_wrap{
+    display: block;
+  }
+  .icon_wrap:before{
+    color: $yellow;
+    font-size: 3em;
+  }
+  .tool_name{
+    font-family: $font_bold;
+    color: white;
+    margin-top: 1.4em;
+    font-size: 1.3em;
+  }
+  .descript{
+    font-family: $font_light;
+    color: white;
+    margin-top: 1.6em;
+    line-height: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .how_we_do{
+    .tools_wrapp{
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .tool_container{
+      flex: 1 0 33.333%;
+      margin-top: 1em;
+    }
+    .tool_name{
+      margin-top: 0.5em;
+    }
+    .descript{
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how_we_do{
+    padding: 2em 0;
+    .tool_container{
+      flex: 1 0 50%;
+      padding: 0 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .how_we_do{
+    .icon_wrap:before{
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.love_to_do{
+  width: 100%;
+  min-height: 37em;
+  background: white;
+  padding: 3.95em 0;
+  @extend .flex_center;
+  align-items: flex-start;
+  .main_wrapper{
+    @extend .flex_column;
+  }
+
+  .services_wrapp{
+    display: flex;
+    margin-top: 3.5em;
+  }
+  .service_container{
+    flex: auto;
+    @extend .flex_column;
+    justify-content: flex-start;
+  }
+  .icon_wrap{
+    border-radius: 50%;
+    color: white;
+    background: $yellow;
+    border: 1px solid $yellow;
+    font-size: 3em;
+    padding: 0.6em;
+    cursor: pointer;
+  }
+  .icon_wrap:hover{
+    border: 1px solid $dark_black;
+    background: white;
+  }
+  .icon_wrap:hover:before{
+    color: $yellow;
+  }
+  .service_name{
+    font-family: $font_bold;
+    color: black;
+    margin-top: 1.4em;
+    font-size: 1.3em;
+  }
+  .descript{
+    font-family: $font_light;
+    color: $dark_black;
+    line-height: 1.5em;
+    margin-top: 1.2em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .love_to_do{
+    .text{
+      padding: 0 1em;
+    }
+    .service_container{
+      padding: 0 0.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .love_to_do{
+    padding: 1.5em 1em;
+    .services_wrapp{
+      flex-wrap: wrap;
+      margin-top: 1.5em;
+    }
+    .service_container{
+      flex: 1 0 50%;
+      margin-top: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .love_to_do{
+    .service_container{
+      flex: 1 0 100%;
+    }
+    .icon_wrap{
+      font-size: 1.8em;
+    }
+  }
+}

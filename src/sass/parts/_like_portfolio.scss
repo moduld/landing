@@ -1,0 +1,27 @@
+.like_portfolio{
+  @extend .flex_center;
+  .main_wrapper{
+    @extend .flex_column;
+    padding: 0 1em;
+  }
+  .chevrone_vertical{
+    margin-top: 1.6em;
+  }
+  .white_sect_big_title{
+    margin-top: 2.2em;
+    text-align: center;
+  }
+  .white_sect_text{
+    margin-top: 1.25em;
+  }
+  .button_bigger_text{
+    color: white;
+    margin: 4.5em 0;
+    padding: 1.8em 4em;
+    font-size: 0.8em;
+    &:hover{
+      color: $dark_black;
+    }
+  }
+}
+

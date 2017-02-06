@@ -1,0 +1,163 @@
+.the_team{
+  background: #fbfbfb;
+  @extend .flex_column;
+  .main_wrapper{
+    @extend .flex_column;
+  }
+  .blocks_wrapper{
+    @extend .flex_between;
+    width: 100%;
+    margin: 3.5em 0 2.8em;
+  }
+  .white_sect_big_title{
+    margin-top: 1.9em;
+    font-size: 2em;
+  }
+  .block{
+    text-align: center;
+    @extend .flex_column;
+    margin-bottom: 1em;
+    &:after{
+      content: "";
+      width: 16.85em;
+      height: 2px;
+      background: #e1e6e6;
+      margin-top: 1em;
+    }
+  }
+  .photo{
+    display: block;
+    height: 15.625em;
+    width: 16.85em;
+    background: gray;
+    cursor: pointer;
+  }
+  .name{
+    margin-top: 1.25em;
+  }
+  .position{
+    margin-top: 0.8em;
+  }
+  .name{
+    color: $yellow;
+  }
+  #team_num_1:checked ~ .about_person > .team_num_1{
+    display: block;
+  }
+  #team_num_1:checked ~ .about_person{
+    display: block;
+    &:before{
+      left: 20%;
+    }
+  }
+  #team_num_2:checked ~ .about_person > .team_num_2{
+    display: block;
+  }
+  #team_num_2:checked ~ .about_person{
+    display: block;
+    &:before{
+      left: 40%
+    }
+  }
+  #team_num_3:checked ~ .about_person > .team_num_3{
+    display: block;
+  }
+  #team_num_3:checked ~ .about_person{
+    display: block;
+    &:before{
+      left: 60%
+    }
+  }
+  #team_num_4:checked ~ .about_person > .team_num_4{
+    display: block;
+  }
+  #team_num_4:checked ~ .about_person{
+    display: block;
+    &:before{
+      left: 80%;
+    }
+  }
+  .about_person{
+    background: $dark_black;
+    width: 100%;
+    position: relative;
+    padding-bottom: 2.4em;
+
+    &:before{
+      content: "";
+      border-bottom: 1.5em solid $dark_black;
+      border-right: 1.5em solid transparent;
+      border-left: 1.5em solid transparent;
+      position: absolute;
+      top: -1.5em;
+
+    }
+    .people_info{
+      max-width: 47.75em;;
+      margin: 4em auto 0;
+      position: relative;
+    }
+    .name{
+      font-size: 1.2em;
+    }
+      .text{
+        color: white;
+        margin-top: 1.5em;
+        font-family: $font_light;
+        line-height: 1.5em;
+      }
+    .icon-cross{
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .social_wrapp{
+      display: flex;
+      margin-top: 1.4em;
+    }
+    .social{
+      width: 2.5em;
+      height: 2.5em;
+      border: 1px solid white;
+      border-radius: 3px;
+      margin-right: 1em;
+      @extend .flex_center;
+      color: white;
+      &:hover{
+        border: 1px solid $yellow;
+      }
+      &:hover:before{
+        color: $yellow;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .the_team{
+    .blocks_wrapper{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .block{
+      flex: 1 0 50%;
+    }
+    .about_person{
+      &:before{
+        display: none!important;
+      }
+      .people_info{
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  .the_team{
+    .block{
+      flex: 1 0 100%;
+    }
+  }
+}

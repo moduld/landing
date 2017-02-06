@@ -1,0 +1,66 @@
+.frazes{
+  width: 100%;
+  height: 18.75em;
+  background: $light_black;
+
+  .fraze_wrapp{
+    @extend .flex_column;
+    color: white;
+    max-width: 42.25em;
+    margin: 5em auto 0;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+  .white_sect_yellow_line{
+    margin-top: 1.4em;
+  }
+  .author{
+    font-size: 1.2em;
+    margin-top: 1.2em;
+  }
+  .swiper-pagination{
+    position: absolute;
+    bottom: 4.3em;
+    width: 100%;
+    text-align: center;
+  }
+  .swiper-pagination-bullet{
+    height: 0.3em;
+    width: 0.3em;
+    background: white;
+    display: inline-block;
+    margin: 0 0.2em;
+    cursor: pointer;
+    border-radius: 0;
+    opacity: 1;
+    &:hover{
+      background: $yellow;
+    }
+  }
+  .swiper-pagination-bullet-active{
+    background: $yellow;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .frazes{
+    .swiper-pagination{
+      bottom: 1em;
+    }
+    .swiper-pagination-bullet{
+      height: 1em;
+      width: 1em;
+      margin: 0 1em !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .frazes{
+    .swiper-pagination{
+      bottom: auto;
+      top: 1em;
+    }
+  }
+}

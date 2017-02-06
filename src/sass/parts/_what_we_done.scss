@@ -1,0 +1,137 @@
+.what_we_done{
+  width: 100%;
+  min-height: 55.94em;
+  background: white;
+  padding: 3.95em 0;
+  @extend .flex_center;
+  align-items: flex-start;
+  .main_wrapper{
+    @extend .flex_column;
+    margin: 0 1em;
+  }
+  .link_group{
+    margin-top: 3em;
+  }
+  .hover_links{
+    color: $dark_black;
+  }
+  .hidden:checked + .hover_links{
+    color: $yellow;
+  }
+  .video_wrapp{
+    display: flex;
+    margin-top: 3em;
+  }
+  .video{
+    min-height: 27.5em;
+    min-width: 42em;
+    @extend .flex_center;
+  }
+  .video_item{
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .describe{
+    padding: 2em;
+    @extend .flex_column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .video_closer{
+    position: absolute;
+    right: 2em;
+    top: 0.3em;
+    font-size: 0.8em;
+  }
+  .video_closer:before{
+    color: $yellow;
+    cursor: pointer;
+  }
+  .video_title{
+    font-family: $font_regular;
+  }
+  .video_describe{
+    font-family: $font_light;
+    color: $dark_black;
+    line-height: 1.3em;
+    margin-top: 1.3em;
+  }
+  .button_smaller_text{
+    margin-top: 3em;
+    font-family: $font_bold;
+    color: white;
+    font-size: 1.4em;
+    padding: 0.75em 1.93em;
+    text-transform: capitalize;
+  }
+  .button_smaller_text:hover{
+    color: $dark_black;
+  }
+  .video_visible{
+    color: $dark_black;
+    cursor: pointer;
+  }
+  .video_visible:hover{
+    color: white;
+  }
+  #video_toggle1:checked ~ .video > .video_visible{
+    display: block;
+  }
+  #video_toggle1:checked ~ .video > .video_item{
+    display: none;
+  }
+  #video_toggle1:checked ~ .video{
+    min-height: auto;
+    min-width: auto;
+    flex:1 0 auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .what_we_done{
+    .white_sect_text{
+      padding: 0 1em;
+    }
+    .video{
+      flex: 1 0 60%;
+      min-height: auto;
+      min-width: auto;
+    }
+    .button_smaller_text{
+      margin-top: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .what_we_done{
+    padding: 2em 0;
+    .link_group{
+      margin-top: 1em;
+      flex-direction: column;
+    }
+    .white_sect_text{
+      padding: 0;
+    }
+    .link_wrap:first-child:before{
+      display: block;
+    }
+    .video_wrapp{
+      flex-wrap: wrap;
+      margin-top: 2em;
+    }
+    .video{
+      min-height: 20em;
+      order: 2;
+    }
+    .describe{
+      align-items: center;
+      padding: 2em 0;
+    }
+    .video_describe{
+      text-align: center;
+    }
+  }
+
+}

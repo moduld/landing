@@ -1,0 +1,168 @@
+header {
+  width: 100%;
+  min-height: 65.35em;
+  //background: $light_green;
+  @extend .background_center;
+  background-size: cover;
+  background-image: url("../img/38731582.jpg");
+  @extend .flex_column;
+  .main_wrapper {
+    @extend .flex_between;
+
+  }
+  .top_menu {
+    min-height: 6.15em;
+    background: $dark_green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0.4em;
+    margin-bottom: 3.2em;
+  }
+  .logo_wrapper {
+    height: 3.75em;
+    width: 6.9em;
+    display: flex;
+    align-items: stretch;
+  }
+  .logo {
+    @extend .background_center;
+    background-image: url("../../assets/img/S-Shape.png");
+    width: 2.5em;
+  }
+  .name_wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: white;
+    align-items: center;
+    margin-left: 0.3em;
+  }
+  .mak {
+    text-transform: uppercase;
+    font-size: 1.875em;
+    margin-bottom: -0.1em;
+  }
+  .theme {
+    text-transform: uppercase;
+    font-size: 0.56em;
+  }
+
+  .close_menu {
+    display: none;
+  }
+  .open_mobile_menu {
+    display: none;
+  }
+  .buy_section {
+    min-height: 23.125em;
+    background: $dark_green;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em 0;
+  }
+  .buy_title {
+    color: white;
+    font-size: 4em;
+    max-width: 15em;
+    text-align: center;
+    line-height: 1.2em;
+    margin-top: 0.15em;
+  }
+  .button_bigger_text {
+    color: $dark_black;
+    text-transform: uppercase;
+    &:hover{
+      color: white;
+    }
+  }
+}
+@media screen and (max-width: 1170px) {
+  header{
+    .top_menu{
+      padding: 0 1em;
+    }
+    .buy_section{
+      padding: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    min-height: 50em;
+    .top_menu {
+      padding-bottom: 0;
+    }
+    .open_mobile_menu {
+      display: block;
+      font-size: 2em;
+      padding: 0.8em;
+      margin-right: 1em;
+      cursor: pointer;
+      color: white;
+    }
+    .open_mobile_menu:hover{
+      color: $yellow;
+    }
+    .link_group {
+      position: fixed;
+      left: 100%;
+      top: 0;
+      width: 65%;
+      height: 100%;
+      flex-direction: column;
+      transition: 0.3s;
+      background: white;
+      z-index: 4;
+    }
+    .link_wrap{
+      width: 80%;
+      border-bottom: 2px solid $yellow;
+    }
+    .hover_links{
+      color: $dark_black;
+      padding: 1.3em 1.5em;
+    }
+    .buy_section{
+      min-height: 18em;
+    }
+    .buy_title{
+      font-size: 2.5em;
+    }
+    .close_menu{
+      min-height: 6.2em;
+      display: flex;
+      justify-content: flex-end;
+    }
+    #header_hidden_input:checked ~ .link_group{
+      transform: translate3d(-100%, 0, 0);
+    }
+    .icon-cross{
+      font-size: 2em;
+      padding: 0.5em;
+    }
+    .icon-cross:hover{
+      color: $yellow;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header{
+    min-height: 40em;
+    .buy_section{
+      min-height: 14em;
+    }
+    .buy_title{
+      font-size: 2em;
+    }
+  }
+}

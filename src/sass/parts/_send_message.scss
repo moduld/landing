@@ -1,0 +1,63 @@
+.send_message{
+  @extend .flex_center;
+  background: $dark_green;
+  padding-bottom: 4.3em;
+  .main_wrapper{
+    @extend .flex_column;
+    margin: 0 1em;
+  }
+  .white_sect_big_title{
+    color: white;
+    font-size: 1.9em;
+    margin-top: 2.2em;
+  }
+  .white_sect_text{
+    color: white;
+  }
+  .message_form{
+    display: block;
+    margin-top: 3.5em;
+    width: 100%;
+  }
+  .input_wrapper{
+    @extend .flex_between;
+  }
+  .fields,
+  .message{
+    border: 1px solid white;
+    padding: 1.5625em;
+    background: $dark_green;
+    color: white;
+  }
+  .fields{
+    flex: 0 0 32%;
+  }
+  .message{
+    display: block;
+    min-height: 16.75em;
+    resize: none;
+    width: 100%;
+    margin-top: 2em;
+  }
+  .button_bigger_text{
+    margin: 1.6em auto 0;
+    display: block;
+    font-size: 1em;
+    padding: 1.3em 3.3em;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .send_message{
+    .input_wrapper{
+      flex-wrap: wrap;
+    }
+    .fields{
+      flex: 1 0 100%;
+      margin-bottom: 1em;
+    }
+  }
+}
